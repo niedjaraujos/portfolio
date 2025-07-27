@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(assets/css/home.css);
+@import url(assets/css/habilidades.css);
+@import url(assets/css/projetos.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root,
+:root[data-theme='dark'] {
+  --color-light: #ffffff;
+  --color-colorida: #ff0000;
+  --color-dark: #000000;
+  --color-opacity: rgba(255, 255, 255, 0.06);
+  --color-border: #1b1b1b;
+}
+:root[data-theme='light'] {
+  --color-light: #000000;
+  --color-dark: #ffffff;
+  --color-opacity: rgba(0, 0, 0, 0.06);
+  --color-border: #fbf6f1;
+}
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light);
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--color-colorida);
+}
+header .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 2rem;
+  gap: 6rem;
+}
+header .title h1 {
+  font-size: 3rem;
+  color: var(--color-colorida);
+}
+header i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--color-light);
+}
+.aside {
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+}
+.aside-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.aside-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.aside-perfil h1 {
+  font-size: 2rem;
+  color: var(--color-light);
+}
+.aside-perfil img {
+  max-width: 150px;
+}
+
+.aside .sociais-icons {
+  text-align: center;
+}
+.sociais-icons i {
+  margin: 0 4px;
+  font-size: 2.5rem;
+  color: var(--color-light);
+  transition: 0.3s;
+  background-color: var(--color-opacity);
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+.sociais-icons a i:hover {
+  color: var(--color-colorida);
+}
+
+.aside .navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.aside .navbar li {
+  list-style: none;
+}
+.aside .navbar li a {
+  font-size: 1.5rem;
+}
+.aside .navbar li a i {
+  font-size: 1.5rem;
+  color: var(--color-colorida);
+}

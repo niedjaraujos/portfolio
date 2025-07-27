@@ -1,0 +1,21 @@
+.habilidades-ferramentas {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 600px;
+  margin-left: 30rem;
+  gap: 1.5rem;
+}
+
+.habilidades-ferramentas img {
+  background-color: var(--color-opacity);
+  padding: 2rem;
+  width: 25%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--color-border);
+  transition: 1s all ease;
+}
+.habilidades-ferramentas img:hover {
+  border: 2px solid var(--color-colorida);
+}

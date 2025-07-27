@@ -1,0 +1,75 @@
+.home {
+  display: none;
+  margin: auto;
+  position: absolute;
+  right: 0;
+}
+.home-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+.home-developer .home-tag {
+  width: 220px;
+  color: var(--color-light-dark);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(
+    130deg,
+    var(--color-gradient-one) 0%,
+    var(--color-gradient-two) 100%
+  );
+  padding: 3px 15px;
+  border-radius: 25px;
+}
+
+.home-developer h1 {
+  font-size: 4rem;
+}
+
+.home-developer .span-sobrenome {
+  color: var(--color-colorida);
+}
+
+.home-info .home-paragrafo {
+  max-width: 37.5rem;
+  color: var(--color-light-dark);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.home-contato {
+  display: flex;
+  gap: 1.2rem;
+}
+.home-info .home-contato button {
+  padding: 10px 30px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.home-info .home-contato button a {
+  color: var(--color-light-dark);
+}
+.btn-curriculo {
+  background: linear-gradient(
+    130deg,
+    var(--color-gradient-two) 0%,
+    var(--color-gradient-one) 100%
+  );
+}
+.btn-contato {
+  background: linear-gradient(
+    130deg,
+    var(--color-gradient-one) 0%,
+    var(--color-gradient-two) 100%
+  );
+}
+.home-contato button:hover {
+  background: none;
+  background-color: var(--color-colorida);
+}
