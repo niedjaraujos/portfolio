@@ -42,7 +42,7 @@ header .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-inline: 2rem;
+  margin-inline: 4rem;
   gap: 6rem;
 }
 header .title h1 {
@@ -57,7 +57,7 @@ header i {
 .aside {
   position: absolute;
   left: 2rem;
-  bottom: 3rem;
+  top: 6rem;
 }
 .aside-nav {
   display: flex;
