@@ -1,3 +1,5 @@
+// modo dark/light
+
 const toggleTheme = document.getElementById('toggleTheme');
 const rootHtml = document.documentElement; //pega todo o html
 
@@ -8,3 +10,5 @@ function changeTheme() {
   toggleTheme.classList.toggle('la-moon');
 }
 toggleTheme.addEventListener('click', changeTheme);
+
+//exibir sessoes
