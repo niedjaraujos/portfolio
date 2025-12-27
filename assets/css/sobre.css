@@ -1,12 +1,9 @@
-h1 {
-  color: var(--color-colorida);
-  font-size: 3rem;
-}
-
 .sobre-paragrafo {
-  max-width: 37.5rem;
-  color: var(--color-light);
+  max-width: 70%;
+  color: var(--color-text);
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
   margin-block: 2rem;
 }

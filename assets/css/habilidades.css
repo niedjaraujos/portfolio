@@ -2,19 +2,25 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 600px;
-  gap: 1.5rem;
+  width: 70%;
+  gap: 2rem;
 }
 
 .habilidades-ferramentas img {
-  background-color: var(--color-opacity);
   padding: 2rem;
-  width: 25%;
+  width: 20%;
   height: auto;
-  border-radius: 12px;
-  border: 2px solid var(--color-border);
-  transition: 1s all ease;
+  border-radius: 1rem;
+  background: var(--color-opacity);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  transition: transform 1s, box-shadow 0.2s ease;
 }
 .habilidades-ferramentas img:hover {
-  border: 2px solid var(--color-colorida);
+  border: 1px solid var(--color-border-hover);
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(57, 14, 66, 0.35);
 }

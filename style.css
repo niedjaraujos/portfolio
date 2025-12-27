@@ -8,42 +8,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-:root,
-:root[data-theme='dark'] {
-  --color-light: #ffffff;
-  --color-colorida: #ff0000;
-  --color-dark: #000000;
-  --color-opacity: rgba(255, 255, 255, 0.06);
-  --color-border: #1b1b1b;
-}
-:root[data-theme='light'] {
-  --color-light: #000000;
-  --color-dark: #ffffff;
-  --color-opacity: rgba(0, 0, 0, 0.06);
-  --color-border: #fbf6f1;
-}
-body {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  font-family: 'Poppins', sans-serif;
-  width: 100vw;
-  min-height: 100vh;
+  list-style: none;
+  text-decoration: none;
 }
 
+:root[data-theme='dark'] {
+  --color-principal: #bb4170;
+  --color-text: #fff3f9;
+  --color-bg: #0a141e;
+  --color-opacity: rgba(255, 255, 255, 0.03);
+  --color-border: #142933;
+  --color-border-hover: #3c5d74;
+}
+:root[data-theme='light'] {
+  --color-principal: #a8376e;
+  --color-text: #0a181e;
+  --color-bg: #fce6ed;
+  --color-opacity: rgba(212, 70, 138, 0.05);
+  --color-border: #f7d4e0;
+  --color-border-hover: #c06e94;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  animation: animatedGradient 15s ease infinite;
+  background-size: 200%;
+  background-image: radial-gradient(
+      circle at 50% 0%,
+      var(--color-opacity),
+      transparent 60%
+    ),
+    radial-gradient(circle at 100% 0%, var(--color-opacity), transparent 50%);
+}
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 a {
-  text-decoration: none;
-  color: var(--color-light);
+  color: var(--color-text);
   transition: 0.3s;
 }
 a:hover {
-  color: var(--color-colorida);
+  color: var(--color-principal);
 }
+
 header .title {
   display: flex;
   align-items: center;
+
   justify-content: space-between;
-  margin-inline: 4rem;
+  margin: 2rem 4rem 1rem;
   gap: 6rem;
 }
 header,
@@ -52,16 +75,17 @@ header,
 }
 header .title h1 {
   font-size: 3rem;
-  color: var(--color-colorida);
+  color: var(--color-principal);
 }
 header i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   cursor: pointer;
-  color: var(--color-light);
+  color: var(--color-text);
+  margin-top: -0.5rem;
 }
 .aside {
-  left: 2rem;
-  top: 6rem;
+  left: 4rem;
+  top: 7rem;
   bottom: 2rem;
 }
 .aside-nav {
@@ -75,9 +99,10 @@ header i {
   align-items: center;
   gap: 1rem;
 }
-.aside-perfil h1 {
+.aside-perfil h2 {
   font-size: 2rem;
-  color: var(--color-light);
+  color: var(--color-text);
+  margin: 0;
 }
 .aside-perfil img {
   max-width: 150px;
@@ -89,20 +114,28 @@ header i {
 .sociais-icons i {
   margin: 0 4px;
   font-size: 2.5rem;
-  color: var(--color-light);
+  color: var(--color-text);
   transition: 0.3s;
   background-color: var(--color-opacity);
   border-radius: 50%;
   padding: 0.3rem;
 }
 .sociais-icons a i:hover {
-  color: var(--color-colorida);
+  color: var(--color-principal);
+  transform: scale(1.1);
 }
 
 .aside .navbar {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.navbar {
+  scroll-target-group: auto;
+  li a:target-current {
+    color: var(--color-principal);
+    text-shadow: 0 0 4px var(--color-principal);
+  }
 }
 .aside .navbar li {
   list-style: none;
@@ -112,8 +145,14 @@ header i {
 }
 .aside .navbar li a i {
   font-size: 1.5rem;
-  color: var(--color-colorida);
+  color: var(--color-principal);
 }
 main {
-  margin-left: 30rem;
+  margin-left: 35rem;
+}
+h2 {
+  color: var(--color-principal);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2rem 0;
 }
